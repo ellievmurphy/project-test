@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Picture from "./Picture";
 
 import "./SearchEngine.css";
 
@@ -45,7 +46,7 @@ export default function SearchEngine() {
       <div className="text">Description: {description}</div>
       <div className="text">Humidity: {humidity}% </div>
       <div className="text">Wind: {wind} km/h </div>
-      <img src={icon} alt="Weather Icon" />
+      <Picture icon={icon} temp={temperature} />
     </div>
   );
 }
